@@ -27,11 +27,11 @@
                 <![CDATA[[Model]
 public $type$ $name$
 {
-    get { return GetValue<$type$>($name$Property); }
-    private set { SetValue($name$Property, value); }
+    get => GetValue<$type$>($name$Property);
+    private set => SetValue($name$Property, value);
 }
 
-public static readonly PropertyData $name$Property = RegisterProperty(nameof($name$), typeof($type$));]]>
+public static readonly IPropertyData $name$Property = RegisterProperty<$type$>(nameof($name$));]]>
             </Code>
             <Imports>
                 <Import>
