@@ -31,11 +31,11 @@
             <Code Language="csharp">
                 <![CDATA[public $type$ $name$
 {
-    get { return GetValue<$type$>($name$Property); }
-    set { SetValue($name$Property, value); }
+    get => GetValue<$type$>($name$Property);
+    set => SetValue($name$Property, value);
 }
 
-public static readonly PropertyData $name$Property = RegisterProperty(nameof($name$), typeof($type$), $defaultvalue$);]]>
+public static readonly IPropertyData $name$Property = RegisterProperty<$type$>(nameof($name$), $defaultvalue$);]]>
             </Code>
             <Imports>
                 <Import>
